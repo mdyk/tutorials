@@ -1,13 +1,3 @@
-FROM eclipse-mosquitto:1.5.3
-
-EXPOSE 1883
-EXPOSE 8883
-EXPOSE 8884
-EXPOSE 8080
-EXPOSE 8081
-
-CMD ["/usr/sbin/mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
-
 # Use an official Python runtime as a parent image
 FROM python:3.7-slim
 
