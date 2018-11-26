@@ -1,0 +1,16 @@
+Komunikacja od urządzenia (ium - publish, server subscribe) :
+- pozycja (ium/position lub ium/position/$client_id/$dev_id)
+    - lat
+    - lon
+    - dev_id ? (to może być numer karty SIM - mapowanie karty )
+- hello (ium/register lub ium/register/$dev_id )
+    - hw_version
+    - sw_version
+    - dev_id ?
+
+Komunikacja do urządzenia (ium - subscribe, server publish)
+    - jeden topic per urządzenie (do ustalenia persystencja komunikatów,
+        może się okazać że niektóre komunikaty mają być powatrzane a inne nie, trzeba będzie wtedy tworzyć nowe topici):
+    - komunikaty:
+        - zmiana stanu
+        - programowanie urządzenia
